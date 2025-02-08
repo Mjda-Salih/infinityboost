@@ -1,0 +1,102 @@
+.navbar {
+  font-family: "Marvel", sans-serif; /* Apply Marvel font to the entire navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  background: transparent;
+  /* background-color: #f0131e; /* Solid Marvel red */
+  /* color: #fff; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); Elegant multi-layered shadow */
+  position: fixed; /* Sticks to the top on scroll */
+  top: 0;
+  z-index: 1000;
+  width: 100vw; /* Full viewport width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  margin: 0; /* Remove any extra margin */
+}
+
+/* Navbar Brand bar */
+.navbar-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Marvel", sans-serif; /* Apply Marvel font only here */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  cursor: pointer;
+}
+
+/* GIF Inside Text */
+.marvel-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Navbar Links Container */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* More spacing between links */
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+/* Default navbar links */
+.hover-marvel-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for navbar links */
+.hover-marvel-text:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Show GIF on hover */
+  background-size: cover;
+}
+
+/* Navbar Links */
+.navbar-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 4px; /* Subtle rounding */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 2rem;
+    transform: skew(-8deg);
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links li a {
+    width: 100%;
+    text-align: center;
+  }
+}
