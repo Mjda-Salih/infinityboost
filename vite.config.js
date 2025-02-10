@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
+// Polyfill for the crypto module
+import nodePolyfills from "rollup-plugin-polyfill-node";
+
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [react(), nodePolyfills()],
+  resolve: {
+    alias: {
+      crypto: "crypto-browserify",
+    },
+  },
+});
