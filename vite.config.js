@@ -5,13 +5,7 @@ import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfil
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    NodeGlobalsPolyfillPlugin({
-      buffer: true,
-    }),
-    NodeModulesPolyfillPlugin(),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       crypto: "crypto-browserify",
