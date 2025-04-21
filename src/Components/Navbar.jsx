@@ -7,19 +7,21 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-brand">
         {/* Infinity Boost always animated */}
-        <span
+        <Link
+          to="/"
           className="marvel-text"
-          style={{
-            backgroundImage: `url(${gifBackground})`,
-          }}
+          style={{ backgroundImage: `url(${gifBackground})` }}
         >
           Infinity Boost
-        </span>
+        </Link>
       </div>
       <ul className="navbar-links">
         {["HOME", "ABOUT", "CONTACT"].map((link, index) => (
           <li key={index}>
-            <Link to={`/${link.toLowerCase()}`} className="hover-marvel-text">
+            <Link
+              to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}
+              className="hover-marvel-text"
+            >
               {link}
             </Link>
           </li>
